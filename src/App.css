@@ -17,3 +17,40 @@
     --fw-regular: 400;
     --fw-semiBold: 600;
 }
+
+.container {
+    background-color: var(--very-dark-blue-cardBG);
+}
+
+.container > div:nth-child(2) > h1 {
+    color: var(--white);
+    font-weight: var(--fw-semiBold);
+}
+
+.container > div:nth-child(2) > p {
+    color: var(--soft-blue);
+    font-weight: var(--fw-light);
+}
+
+.content {
+    border-bottom: 2px solid var(--very-dark-blue-line);
+}
+
+.content > div:nth-child(1) > p {
+    color: var(--cyan);
+    font-weight: var(--fw-semiBold);
+}
+
+.content > div:nth-child(2) > p {
+    color: var(--soft-blue);
+    font-weight: var(--fw-regular);
+}
+
+.footer > p {
+    color: var(--soft-blue);
+    font-weight: var(--fw-light);
+}
+
+.footer > p > span {
+    color: var(--white);
+}
