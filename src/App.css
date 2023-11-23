@@ -22,9 +22,40 @@
     background-color: var(--very-dark-blue-cardBG);
 }
 
+.containerOverlay {
+    position: relative;
+}
+
+.containerOverlay > img {
+    position: relative;
+    z-index: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--cyan);
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.5s;
+    border-radius: 15px;
+}
+
+.containerOverlay:hover .overlay {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
 .container > div:nth-child(2) > h1 {
     color: var(--white);
     font-weight: var(--fw-semiBold);
+}
+
+.container > div:nth-child(2) > h1:hover {
+    color: var(--cyan);
 }
 
 .container > div:nth-child(2) > p {
@@ -53,4 +84,8 @@
 
 .footer > p > span {
     color: var(--white);
+}
+
+.footer > p > span:hover {
+    color: var(--cyan);
 }

@@ -2,6 +2,7 @@ import NFT from "./images/image-equilibrium.jpg";
 import ETH from "./images/icon-ethereum.svg";
 import Clock from "./images/icon-clock.svg";
 import Avatar from "./images/image-avatar.png";
+import View from "./images/icon-view.svg";
 import React from 'react'
 
 function NFTCard() {
@@ -12,15 +13,21 @@ function NFTCard() {
 
             <div className="container w-[470px] max-w-[90%] lg:h-[full] flex flex-col p-9 rounded-[20px]">
 
-                <div className="w-full">
+                <div className="w-full containerOverlay">
 
-                    <img src={NFT} alt="NFT" className="w-[100%] rounded-[15px]" />
+                    <img src={NFT} alt="NFT" className="w-[100%] rounded-[15px] relative z-20" />
+
+                    <div className="overlay flex justify-center items-center">
+
+                        <img src={View} alt="" />
+
+                    </div>
 
                 </div>
 
                 <div>
 
-                    <h1 className="text-[21px] sm:text-[35px] py-4">Equilibrium #3429</h1>
+                    <h1 className="text-[21px] sm:text-[35px] py-4 hover:cursor-pointer">Equilibrium #3429</h1>
 
                     <p className="text-[16px] sm:text-[26px]">Our Equilibrium collection promotes balance and calm.</p>
 
@@ -48,7 +55,7 @@ function NFTCard() {
 
                         <img src={Avatar} alt="" className="border-2 rounded-full w-[40px] md:w-[50px]" />
 
-                        <p className="text-[16px] sm:text-[20px] md:text-[23px]">Creation of <span>Jules Wyvern</span></p>
+                        <p className="text-[16px] sm:text-[20px] md:text-[23px] hover:cursor-pointer">Creation of <span>Jules Wyvern</span></p>
 
                     </div>
 
